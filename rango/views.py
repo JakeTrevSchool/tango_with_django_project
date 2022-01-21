@@ -2,5 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Rango says hey there partner!")
+    CONTEXT_DICT = {"boldmessage":"Crunchy, creamy, cookie, candy, cupcake!"}
+
+    return render(request, "rango/index.html", context=CONTEXT_DICT)
     
